@@ -1,5 +1,7 @@
 import time
 import pyautogui
+import sys
+import datetime
 
 # Check the operating system and set the hotkey accordingly
 if sys.platform == 'win32':
