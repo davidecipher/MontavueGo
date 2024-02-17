@@ -6,6 +6,13 @@ pyautogui.press('win')
 pyautogui.typewrite('MontavueGo')
 pyautogui.press('enter')
 
+# Handle User Account Control (UAC) prompt
+uac_prompt = pyautogui.locateOnScreen('uac_prompt.png', confidence=0.9)
+if uac_prompt is not None:
+    # If the UAC prompt is found, click the "Yes" button
+    uac_center = pyautogui.center(uac_prompt)
+    pyautogui.click(uac_center)
+
 # Wait for the MontavueGo app to load
 time.sleep(10)
 
